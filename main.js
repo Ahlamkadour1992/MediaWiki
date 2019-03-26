@@ -1,9 +1,10 @@
-document.getElementById('button').addEventListener("click", myFunction);
+document.getElementById('button').addEventListener("click", getMediaWikiData);
+var url = 'https://www.mediawiki.org/w/api.php?action=opensearch&search=';
 
-function myFunction {
-const ul = document.getElementById('input');
-const url = 'https://www.mediawiki.org/w/api.php?action=opensearch&search=';
-fetch(url)
+function getMediaWikiData (event) {
+var keyword = document.getElementById('input').value;
+var searchURL = url + keyword;
+fetch(searchURL)
   .then(function(response) {
     return response.json();
   })
