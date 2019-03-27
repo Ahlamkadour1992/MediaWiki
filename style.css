@@ -13,7 +13,18 @@ body{
 
 .h1{
   font-size: 90px;
+  color: #00004d;
 }
 .form{
-  padding: 8%;
+  padding: 5%;
+}
+.footer {
+  padding: 5%;
+}
+.nameOfsearch{
+  font-size: 25px;
+  color: #00004d;
+}
+.linkOfSearch {
+  font-size: 20px;
 }
