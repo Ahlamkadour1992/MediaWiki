@@ -1,5 +1,4 @@
 var url = 'https://www.mediawiki.org/w/api.php?action=opensearch&format=json&origin=*&search=';
-// var url = 'https://www.mediawiki.org/w/api.php?action=parse&format=json'
 function getMediaWikiData(event) {
   var keyword = document.getElementById('input').value;
   var searchURL = url + keyword;
@@ -10,7 +9,7 @@ function getMediaWikiData(event) {
       return response.json();
     })
     .then(function(data) {
-      console.log(data);
+      console.log("name: ", data[0], "link: ", data[3][0]);
       // console.log(data ? JSON.parse(data) : {});
     })
     .catch(function(error) {
