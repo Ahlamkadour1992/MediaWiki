@@ -5,12 +5,16 @@ function getMediaWikiData(event) {
   console.log(searchURL);
   fetch(searchURL)
     .then(function(response) {
-      // console.log(response.text());
       return response.json();
     })
     .then(function(data) {
-      console.log("name: ", data[0], "link: ", data[3][0]);
-      // console.log(data ? JSON.parse(data) : {});
+      console.log(data);
+      var resultUrl = data[3][0];
+      var resultTitle = data[3][0].split('/')[4];
+      console.log("resultUrl is ", resultUrl);
+      console.log("resultTitle is ", resultTitle);
+      document.getElementById("title").textContent = resultTitle;
+      document.getElementById("description").textContent = resultUrl;
     })
     .catch(function(error) {
       console.log(error);
@@ -18,3 +22,6 @@ function getMediaWikiData(event) {
 }
 
 document.getElementById('button').addEventListener("click", getMediaWikiData);
+document.getElementById('description').addEventListener("click", function(){
+  window.open(document.getElementById("description").textContent,'_blank');
+});
