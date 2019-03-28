@@ -10,7 +10,7 @@
 ### we build a simple web app that must query an API and use the result to update the DOM.
 ### Ask user's input for their technical stuff, then the Program will navigate to the article.
 
-![picture](https://i.ibb.co/dpNX8jj/Whats-App-Image-2019-03-27-at-15-22-06.jpg)
+![picture](./assets/architecture.jpeg)
 
 ## Technologies Used:
 * ### *Html*
